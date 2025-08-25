@@ -15,7 +15,7 @@ export default function ViewCreator() {
         .from("creators")
         .select("*")
         .eq("id", id)
-        .single(); // expects exactly one row
+        .single();
       if (error) setErr(error.message);
       else setCreator(data);
       setLoading(false);
